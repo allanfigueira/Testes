@@ -1,0 +1,132 @@
+
+//--------------------reset--------------------------
+html,body{
+  height: 98vh;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /*
+  a cada 1rem se considera 10px
+  */
+  font-size: 62.5%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+//--------------------------mixins------------------------
+  @mixin caixas() {
+    width: 100%;
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.514);
+  }
+
+//---------------------------container principal-------------------
+    .container{
+    max-width: 80vw;
+    margin: auto;
+    font-size: 1.6rem;
+    padding-bottom: 150px;
+    
+      }
+        .grid1{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px ,1fr));
+        grid-gap: 40px;
+        margin-bottom: 20px;     
+      }
+    
+// --------------------------icones-----------------------------
+.check-icon{
+  color:#4AD991;
+  font-size: 3rem;
+  margin-right: 10px;
+  background-color: #DAF7E8;
+  border-radius: 50%;
+  padding: 8px;
+  cursor: pointer;
+}
+
+.check-icon2{
+  color:#4AD991;
+  font-size: 3rem;
+  margin-right: 10px;
+  border: 1px solid #4AD991;
+  border-radius: 50%;
+  padding: 8px;
+  cursor: pointer;
+  position: relative;
+}
+
+.eye-icon{
+  border: 1px solid #81C9FF;
+  color: #81C9FF;
+  border-radius: 50%;
+  padding: 3px;
+  font-size: 4rem;
+  margin-right: 10px ;
+  cursor: pointer;
+}
+.manutenção-icon{
+  color:#FF7285;
+  font-size: 3rem;
+  margin-right: 10px;
+  background-color: #FFE2E6;
+  border-radius: 50%;
+  padding: 8px;
+  cursor: pointer;
+}
+.alert-icon{
+  color:#fff;
+  font-size: 2rem;
+  margin-right: 10px;
+  border: 5px solid #FFF4E5;
+  background-color: #FFCA83;
+  border-radius: 50%;
+  padding: 8px;
+  cursor: pointer;
+}
+
+.info-icon{
+  border: 1px solid #FFCA83;
+  color: #FFCA83;
+  border-radius: 50%;
+  padding: 8px;
+  font-size: 3rem;
+  margin-right: 10px ;
+  cursor: pointer;
+}
+// colocar tooltips nos icones...  
+
+.tooltip-serviços {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip-serviços .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  box-shadow: 0px 0px 0px 2px rgba(0, 0, 0, 0.349);
+  background-color: #fff;
+  color: #000;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+  right: 120%;
+  top: 25%;
+}
+
+.tooltip-serviços:hover .tooltiptext {
+  visibility: visible;
+}
+//---------------------seta do tooltip----------------------
+.tooltip-serviços .tooltiptext::after {
+  content: " ";
+  position: absolute;
+  top: 50%;
+  left: 100%; /* To the right of the tooltip */
+  margin-top: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent transparent #000;
+}
